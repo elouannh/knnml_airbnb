@@ -12,5 +12,7 @@ int main() {
   if (column_count >= 0)
     printf("The file has %d columns.", column_count);
 
+  read_all_lines(filename);
+
   return 0;
 }
