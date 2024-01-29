@@ -26,6 +26,6 @@ void read_all_lines(const char* filename);
  * \param filename The file name.
  * \return The content of the line.
  */
-char* read_line(const char* filename);
+char* read_line(const FILE* filename);
 
 #endif //CSV_MANAGER_H

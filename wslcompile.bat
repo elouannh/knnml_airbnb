@@ -13,8 +13,8 @@ set "WSLPATH=%WSLPATH:~0,-1%"
 
 set "WSLPATH=/mnt/c%WSLPATH:~2%"
 
-start wsl python3 %WSLPATH%/%PYTHONSOURCE%
-start wsl gcc %WSLPATH%/%SOURCES% -o %WSLPATH%/%EXECUTABLE%
+wsl python3 %WSLPATH%/%PYTHONSOURCE%
+wsl gcc %WSLPATH%/%SOURCES% -o %WSLPATH%/%EXECUTABLE%
 
 if %errorlevel% equ 0 (
     echo Compilation succeeded. The executable is named %EXECUTABLE%.
@@ -22,7 +22,7 @@ if %errorlevel% equ 0 (
     echo Running the program...
     for /L %%i in (1,1,3) do (echo .)
 
-    start wsl %WSLPATH%/%EXECUTABLE%
+    wsl %WSLPATH%/%EXECUTABLE%
 ) else (
     echo Compilation failed.
 )

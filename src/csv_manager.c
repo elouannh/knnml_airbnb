@@ -41,7 +41,7 @@ void read_all_lines(const char* filename)
   }
 
   char* line;
-  while ((line = read_line((const char*)file)) != NULL)
+  while ((line = read_line(file)) != NULL)
   {
     printf("%s", line);
     free(line);
