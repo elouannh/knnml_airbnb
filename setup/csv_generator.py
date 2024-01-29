@@ -21,7 +21,7 @@ columns: dict = {
 # We generate the CSV file with each column.
 with open("res/rawdict.csv", "w") as csv_file:
     for column_key in columns.keys():
-        csv_file.write(f"{column_key}{',' if column_key == list(columns.keys())[-1] else '\n'}")
+        csv_file.write(f"{column_key}{',' if column_key == list(columns.keys())[-1] else '\\n'}")
 
 # The number of entries in the CSV file.
 entries: int = 5000
