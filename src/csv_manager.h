@@ -22,8 +22,8 @@ int count_columns(const char* filename);
 void read_all_lines(const char* filename);
 
 /**
- * \brief Read a file and returns the content.
- * \param filename The file name.
+ * \brief Read a file and returns a line content.
+ * \param file The file where the line is.
  * \return The content of the line.
  */
 char* read_line(FILE* file);
